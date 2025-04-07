@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4LO KO BEATS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">4LO KO</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#beats">Beats</a></li>
+                    <li><a href="#lincenses">Lincenses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="hero">
+            <h2>Premium Beats for Your Next Hit</h2>
+            <p>High-Quality, exclusive beats for upcoming artists</p>
+            <a href="#beats" class="btn">Browse Beats</a>
+        </section>
+        <section id="beats">
+            <h2 class="section-title">Latest Beats</h2>
+            <div class="beat-grid" id="beatContainer">
+            <!-- Beats will be loaded dynamically via javaScript -->
+            </div>
+        </section>
+        <!-- Licenses Section -->
+<section id="licenses" class="section">
+    <h2>Licensing Options</h2>
+    <div class="license-grid">
+        <!-- Basic License -->
+        <div class="license-card">
+            <h3>Basic License</h3>
+            <p class="price">$29.99</p>
+            <ul>
+                <li>✔ 1,000 streams</li>
+                <li>✔ Non-profit use</li>
+                <li>✖ No commercial rights</li>
+            </ul>
+            <button class="btn">Select</button>
+        </div>
+        
+        <!-- Premium License -->
+        <div class="license-card">
+            <h3>Premium License</h3>
+            <p class="price">$99.99</p>
+            <ul>
+                <li>✔ Unlimited streams</li>
+            <li>✔ Commercial use (up to 10K copies)</li>
+                <li>✔ 24/7 support</li>
+            </ul>
+            <button class="btn">Select</button>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="about-content">
+        <img src="your-photo.jpg" alt="Producer Photo" class="about-img">
+        <div class="about-text">
+            <p>Hey, I'm [Your Name], a beat producer specializing in [genres]. 
+               With over X years of experience, I craft high-quality beats for artists worldwide.</p>
+            <p>My mission: Help you create hits.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <h2>Get In Touch</h2>
+    <div class="contact-grid">
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> your@email.com</p>
+            <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+            <p><i class="fas fa-map-marker-alt"></i> Your Studio Location</p>
+        </div>
+    </div>
+</section>
+
+        <section id="lincense">
+            <h2 class="section-title">Lincense options</h2>
+            <div class="lincense-grid">
+            <!-- Lincense cards will be here -->
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy;2025 4LO KO BEATS. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Audio Player Modal -->
+    <div class="modal" id="PlayerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="Bohemiam">Bohemiam</h3>
+            <audio id="modalAudioPlayer">controls</audio>
+            <!-- options will be populated by javaScript-->
+        </div>
+    </div>
+    <!-- Payment Modal -->
+<div class="modal" id="paymentModal">
+    <div class="modal-content">
+        <span class="close-payment-modal">&times;</span>
+        <h3>Complete Your Purchase</h3>
+        <div id="paymentSummary">
+            <!-- Will be filled by JavaScript -->
+        </div>
+        <form id="payment-form">
+            <div id="payment-element">
+                <!-- Stripe will insert the payment form here -->
+            </div>
+            <button type="submit" id="submit-payment" class="btn">
+                <span id="button-text">Pay Now</span>
+                <span id="payment-spinner" class="spinner hidden"></span>
+            </button>
+            <div id="payment-message" class="hidden"></div>
+        </form>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
